@@ -1,0 +1,10 @@
+agm-map {
+  height: 26vh;
+  width:35vw;
+}
+a {
+  color: darkblue;
+}
+.main-footer{
+  background-image: url("/src/assets/gravel.png");
+}

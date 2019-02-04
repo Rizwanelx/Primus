@@ -1,0 +1,134 @@
+<div #spacer></div>
+<div stickyThing [spacer]="spacer" style="height: 8vh;color:white;background-color:#13314c;position: fixed;z-index: 5;width: 98vw">
+<div class="row" >
+  <div class="col-sm-4">
+    <p class="fas fa-envelope"> <span>primustechnologiesandservices@gmail.com</span></p>
+  </div>
+  <div class="col-sm-4">
+    <p class="fas fa-phone"> <span> +91 9587371992</span></p>
+  </div>
+  <div class="col-sm-2">
+    <a style="margin-right: 10px" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a style="margin-right: 10px" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a style="margin-right: 10px" href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin"></i></a>
+    <a style="margin-right: 10px" href="https://www.instagram.com/" target="_blank">  <i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+</div>
+<div style="height: auto">
+  <mat-toolbar style="color: black;position: fixed;z-index:3">
+    <mat-toolbar-row style="">
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Primus Technologies & Services</span>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true" class="btn-header" >
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <a class="btn" routerLink="home" >
+          Home
+        </a>
+        <div ngbDropdown class="d-inline-block">
+          <a class="btn"   routerLink="automation-services" id="dropdownBasic1" ngbDropdownToggle>Services</a>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item">Industrial Automation</button>
+            <button class="dropdown-item">Electrical & Control Panel Assembly</button>
+            <button class="dropdown-item">Something else is here</button>
+          </div>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+          <a class="btn"   routerLink="products" id="dropdownBasic2" ngbDropdownToggle>Products</a>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item">Limit Switches</button>
+            <button class="dropdown-item">Industrial Sensors</button>
+            <button class="dropdown-item">DC Servo Motor</button>
+            <button class="dropdown-item">AC Servo Motor</button>
+            <button class="dropdown-item">PLC Drives</button>
+            <button class="dropdown-item">LPG Filling Heads</button>
+            <button class="dropdown-item">LPG Spares</button>
+            <button class="dropdown-item">Cables</button>
+            <button class="dropdown-item">Conveyor Chain</button>
+            <button class="dropdown-item">Pneumatic Products</button>
+          </div>
+        </div>
+        <a    class="btn"  routerLink="products" >
+          Carrers
+        </a>
+        <a   class="btn"  routerLink="contact">
+          Contact Us
+        </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill  >
+    <mat-sidenav #sidenav style="background:grey;color: white;" >
+      <mat-nav-list>
+        <a (click)="sidenav.toggle()" mat-list-item style="float: right">
+          <mat-icon>close</mat-icon>
+        </a>
+        <br><br><br>
+        <a routerLink="home" mat-list-item>
+          <button mat-stroked-button class="btn-side"  >
+            <mat-icon>home</mat-icon>
+            Home
+          </button>
+        </a>
+        <a  ngbDropdown class="d-inline-block" mat-list-item>
+          <a routerLink="automation-services" id="dropdownBasic3" ngbDropdownToggle >
+            <mat-icon>settings</mat-icon>
+            <button mat-stroked-button> Services</button>
+          </a>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item">Industrial Automation</button>
+            <button class="dropdown-item">Electrical & Control Panel Assembly</button>
+            <button class="dropdown-item">Something else is here</button>
+          </div>
+        </a>
+        <a ngbDropdown class="d-inline-block" mat-list-item>
+        <a   routerLink="products" id="dropdownBasic4" ngbDropdownToggle  >
+          <button mat-stroked-button  >
+            <mat-icon>vpn_key</mat-icon>
+            Products
+          </button>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item">Limit Switches</button>
+          <button class="dropdown-item">Industrial Sensors</button>
+          <button class="dropdown-item">DC Servo Motor</button>
+          <button class="dropdown-item">AC Servo Motor</button>
+          <button class="dropdown-item">PLC Drives</button>
+          <button class="dropdown-item">LPG Filling Heads</button>
+          <button class="dropdown-item">LPG Spares</button>
+          <button class="dropdown-item">Cables</button>
+          <button class="dropdown-item">Conveyor Chain</button>
+          <button class="dropdown-item">Pneumatic Products</button>
+        </div>
+      </a>
+        <a  routerLink="products"  mat-list-item>
+          <button mat-stroked-button    class="btn-side" mat-button>
+            <mat-icon>vpn_key</mat-icon>
+            Carrers
+          </button>
+        </a>
+        <a  routerLink="products"  mat-list-item>
+          <button mat-stroked-button    class="btn-side" mat-button>
+            <mat-icon>person</mat-icon>
+            About Us
+          </button>
+        </a>
+        <a  routerLink="contact"  mat-list-item>
+          <button mat-stroked-button    class="btn-side" mat-button>
+            <mat-icon>contact_mail</mat-icon>
+            Contact
+          </button>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <router-outlet>
+    </router-outlet>
+  </mat-sidenav-container>
+</div>
+
+
+
+
